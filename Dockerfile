@@ -1,10 +1,6 @@
 FROM ubuntu:20.04 AS build
 
-<<<<<<< HEAD
-ENV MONERO_VERSION=0.17.1.7 MONERO_SHA256=98ce0d22db0d1112114bbad4c9773d1490d30e5c643423c2e5bffc19553207f9
-=======
 ENV MONERO_VERSION=0.17.1.8 MONERO_SHA256=b566652c5281970c6137c27dd15002fe6d4c9230bc37d81545b2f36c16e7d476
->>>>>>> ff4fd65a4 (update monerod to 0.17.8)
 
 RUN apt-get update && apt-get install -y curl bzip2
 
@@ -33,4 +29,4 @@ VOLUME /monero
 EXPOSE 18080 18081
 
 ENTRYPOINT ["monerod"]
-CMD ["--rpc-bind-ip=0.0.0.0", "--data-dir=/monero", "--rpc-ssl=enabled", "--restricted-rpc", "--public-node", "--confirm-external-bind",  "--non-interactive", "--no-zmq"]
+CMD ["--rpc-bind-ip=0.0.0.0", "--data-dir=/monero", "--rpc-ssl=enabled", "--restricted-rpc", "--public-node", "--confirm-external-bind",  "--non-interactive", "--no-zmq, --log-level=1"]
