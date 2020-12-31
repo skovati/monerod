@@ -29,4 +29,4 @@ VOLUME /monero
 EXPOSE 18080 18081
 
 ENTRYPOINT ["monerod"]
-CMD ["--rpc-bind-ip=0.0.0.0", "--data-dir=/monero", "--rpc-ssl=enabled", "--restricted-rpc", "--public-node", "--confirm-external-bind",  "--non-interactive", "--no-zmq, --log-level=1"]
+CMD ["--rpc-bind-ip=0.0.0.0", "--data-dir=/monero", "--rpc-ssl=enabled", "--restricted-rpc", "--public-node", "--confirm-external-bind",  "--non-interactive", "--no-zmq", "--log-level=1"]
